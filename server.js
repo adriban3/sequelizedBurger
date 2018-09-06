@@ -2,12 +2,12 @@ var express = require("express");
 var bp = require("body-parser");
 var db = require("./models");
 var exphbs = require("express-handlebars");
-require("./controllers/burger_controllers")(app);
 var mo = require("method-override");
 
 var PORT = process.env.PORT || 8080;
 
 var app = express();
+require("./controllers/burger_controllers")(app);
 
 app.use(express.static("public"));
 
