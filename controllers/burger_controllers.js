@@ -20,6 +20,7 @@ module.exports = function (app) {
   // });
 
   app.post("/api/burgers", function (req, res) {
+    console.log(req.body);
     db.burger.create(req.body).then(function () {
       res.redirect("/");
     })
